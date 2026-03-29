@@ -15,24 +15,47 @@ PALETTE COULEUR
 
 :root {
   --bg-main: #0f0f10;
-  --bg-panel: #1b1c1f;
-  --bg-card: #23252a;
+  --bg-panel: rgba(27, 28, 31, 0.85);
+  --bg-card: rgba(35, 37, 42, 0.92);
 
   --border-main: #5a3e2b;
-  --border-soft: #2f3136;
-
-  --btn-brown: #5a3e2b;
-  --btn-blue: #16324f;
+  --border-soft: rgba(255,255,255,0.08);
 }
 
 /* ===============================
-FOND GENERAL
+FOND AVEC IMAGE
 =============================== */
 
 body {
-  background: var(--bg-main);
+
   margin: 0;
   font-family: Arial, sans-serif;
+
+  background-image:
+    linear-gradient(
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.65)
+    ),
+    url("./assets/img/soarano.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* dynamique desktop */
+
+  background-attachment: fixed;
+
+}
+
+/* mobile stabilité */
+
+@media (max-width: 768px) {
+
+  body {
+    background-attachment: scroll;
+  }
+
 }
 
 /* ===============================
@@ -44,14 +67,84 @@ TOUTES LES POLICES EN BLANC
 }
 
 /* ===============================
+MISE EN PAGE
+=============================== */
+
+.page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ===============================
 PANELS
 =============================== */
 
 .panel,
 .summary-card,
-.today-banner {
+.today-banner,
+.hero {
+
   background: var(--bg-panel);
+
   border: 1px solid var(--border-soft);
+
+  border-radius: 18px;
+
+  padding: 18px;
+
+  margin-bottom: 16px;
+
+  backdrop-filter: blur(4px);
+
+}
+
+/* ===============================
+GRILLES
+=============================== */
+
+.nav-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 14px;
+
+}
+
+.grid-2 {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 16px;
+
+}
+
+.grid-3 {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 14px;
+
+}
+
+/* responsive */
+
+@media (max-width: 900px) {
+
+  .nav-grid,
+  .grid-2,
+  .grid-3 {
+
+    grid-template-columns: 1fr;
+
+  }
+
 }
 
 /* ===============================
@@ -77,18 +170,20 @@ BOUTONS NAVIGATION EN RELIEF
   transform: translateY(-2px);
 
   box-shadow:
+
     0 8px 18px rgba(0,0,0,0.45),
     0 0 0 1px rgba(255,255,255,0.04);
 
 }
 
-/* hover souris */
+/* hover */
 
 .nav-item:hover {
 
   transform: translateY(-4px);
 
   box-shadow:
+
     0 12px 24px rgba(0,0,0,0.55);
 
 }
@@ -100,6 +195,7 @@ BOUTONS NAVIGATION EN RELIEF
   transform: translateY(1px);
 
   box-shadow:
+
     0 4px 10px rgba(0,0,0,0.35);
 
 }
@@ -109,9 +205,13 @@ FOOTER
 =============================== */
 
 .page-footer {
+
   text-align: center;
+
   padding: 20px;
+
   opacity: 0.7;
+
 }
 
   </style>
