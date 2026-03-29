@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feuille de route - Suivi voyage Madagascar</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+<main class="page">
+  <section class="hero">
+    <div class="eyebrow">Consultation rapide + notes modifiables</div>
+    <h1>Feuille de route familiale — Madagascar</h1>
+    <p>Version mobile-friendly pour suivre le voyage, retrouver les infos clés, et ajouter des notes utiles sur le terrain.</p>
+  </section>
+  
+<section class="nav-card">
+  <div class="nav-grid">
+    <a data-nav class="nav-item" href="../index.html"><strong>Accueil</strong><span>Vue d’ensemble du séjour</span></a>
+    <a data-nav class="nav-item" href="./convertisseur.html"><strong>Convertisseur</strong><span>AR ↔ € rapide</span></a>
+    <a data-nav class="nav-item" href="./depenses.html"><strong>Dépenses</strong><span>Suivi + saisie rapide</span></a>
+    <a data-nav class="nav-item" href="./feuille-de-route.html"><strong>Feuille de route</strong><span>Programme détaillé</span></a>
+    <a data-nav class="nav-item" href="./reservations.html"><strong>Réservations</strong><span>Hôtels, voiture, activités</span></a>
+    <a data-nav class="nav-item" href="./infos-utiles.html"><strong>Infos utiles</strong><span>Contacts et rappels</span></a>
+  </div>
+</section>
+
+  <section class="panel toolbar">
+    <div class="toolbar-top">
+      <div>
+        <label for="searchInput">Recherche rapide</label>
+        <input id="searchInput" type="text" placeholder="Ville, hôtel, activité, réservation…" />
+      </div>
+      <div>
+        <label for="filterSelect">Filtre</label>
+        <select id="filterSelect">
+          <option value="all">Tout afficher</option>
+          <option value="today">Aujourd’hui</option>
+          <option value="upcoming">À venir</option>
+          <option value="withReservation">Avec réservation</option>
+        </select>
+      </div>
+    </div>
+    <div class="toolbar-actions">
+      <button type="button" class="btn btn-primary" id="expandAllBtn">Tout ouvrir</button>
+      <button type="button" class="btn btn-secondary" id="collapseAllBtn">Tout réduire</button>
+      <button type="button" class="btn btn-warning" id="resetNotesBtn">Réinitialiser les notes</button>
+    </div>
+    <div class="note" id="saveStatus">Les notes sont sauvegardées localement sur l’appareil.</div>
+  </section>
+  <section id="routeList" class="list"></section>
+  <div class="page-footer">Feuille de route • <span data-current-year></span></div>
+</main>
+
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/feuille-route.js"></script>
+</body>
+</html>
