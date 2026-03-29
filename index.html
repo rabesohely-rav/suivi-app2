@@ -4,72 +4,186 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Accueil - Suivi voyage Madagascar</title>
+
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+
+:root {
+  --bg-main: #0f0f10;
+  --bg-panel: #1b1c1f;
+  --bg-card: #23252a;
+
+  --border-main: #5a3e2b;
+  --border-soft: #2f3136;
+
+  --btn-brown: #5a3e2b;
+  --btn-blue: #16324f;
+
+  --text-main: #ffffff;
+  --text-soft: #c9cdd3;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+.panel,
+.summary-card,
+.today-banner {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-soft);
+}
+
+.nav-item {
+  background: var(--bg-card);
+  color: var(--text-main);
+
+  border: 2px solid var(--border-main);
+
+  border-radius: 14px;
+
+  padding: 16px;
+
+  text-decoration: none;
+
+  display: block;
+
+  transition: all 0.15s ease;
+
+  box-shadow:
+    0 6px 14px rgba(0,0,0,0.35);
+}
+
+/* relief principal */
+
+.nav-item {
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(0,0,0,0.45),
+    0 0 0 1px rgba(255,255,255,0.04);
+
+}
+
+/* hover souris */
+
+.nav-item:hover {
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 24px rgba(0,0,0,0.55);
+
+}
+
+/* pression tactile */
+
+.nav-item:active {
+
+  transform: translateY(1px);
+
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.35);
+
+}
+
+/* texte */
+
+h1,
+h2,
+h3,
+strong {
+  color: var(--text-main);
+}
+
+span,
+p,
+.note {
+  color: var(--text-soft);
+}
+
+.page-footer {
+  color: var(--text-soft);
+}
+
+  </style>
+
 </head>
 <body>
 
 <main class="page">
-  <section class="hero">
-    <div class="eyebrow">App voyage Madagascar • simple • mobile • offline autant que possible</div>
-    <h1>Tableau de bord du séjour</h1>
-    <p>Un point d’entrée unique pour suivre la journée, convertir vite, retrouver les réservations, consulter la feuille de route et saisir les dépenses sans friction.</p>
-  </section>
 
-  <section class="today-banner">
-    <div class="field-label">Aujourd’hui</div>
-    <div class="kpi" data-today-label>—</div>
-    <div class="note">Pense à mettre à jour le taux une fois par jour quand tu as du réseau.</div>
+  <section class="hero">
+
+    <h1>
+      Tableau de bord du séjour
+    </h1>
+
   </section>
 
   <section class="summary grid-3">
-    <div class="summary-card">
-      <div class="summary-label">Période</div>
-      <div class="summary-value">9 juillet → 10 août 2026</div>
-    </div>
-    <div class="summary-card">
-      <div class="summary-label">Famille</div>
-      <div class="summary-value">2 adultes + 2 enfants</div>
-    </div>
-    <div class="summary-card">
-      <div class="summary-label">Principe</div>
-      <div class="summary-value">Consultation rapide, terrain, hors ligne</div>
-    </div>
+
   </section>
 
   <section class="panel">
-    <h2 class="section-title">Navigation</h2>
+
+    <h2 class="section-title">
+      Navigation
+    </h2>
+
     <div class="nav-grid">
-      <a class="nav-item" href="./pages/convertisseur.html"><strong>Convertisseur</strong><span>Accès direct terrain au marché ou pour vérifier un montant</span></a>
-      <a class="nav-item" href="./pages/depenses.html"><strong>Ajouter / suivre les dépenses</strong><span>Saisie rapide + tableau détaillé</span></a>
-      <a class="nav-item" href="./pages/feuille-de-route.html"><strong>Feuille de route</strong><span>Programme complet du voyage avec notes modifiables</span></a>
-      <a class="nav-item" href="./pages/reservations.html"><strong>Mes réservations</strong><span>Hôtels, voiture, numéros et contacts utiles</span></a>
-      <a class="nav-item" href="./pages/agenda.html"><strong>Agenda</strong><span>Vue légère des dates clés</span></a>
-      <a class="nav-item" href="./pages/infos-utiles.html"><strong>Infos utiles</strong><span>Règles AVIS, conseils enfants, points pratiques</span></a>
+
+      <a class="nav-item" href="./pages/convertisseur.html">
+        <strong>Convertisseur</strong>
+        
+      </a>
+
+      <a class="nav-item" href="./pages/depenses.html">
+        <strong>Ajouter / suivre les dépenses</strong>
+       
+      </a>
+
+      <a class="nav-item" href="./pages/feuille-de-route.html">
+        <strong>Feuille de route</strong>
+        
+      </a>
+
+      <a class="nav-item" href="./pages/reservations.html">
+        <strong>Mes réservations</strong>
+      
+      </a>
+
+      <a class="nav-item" href="./pages/agenda.html">
+        <strong>Agenda</strong>
+      </a>
+
+      <a class="nav-item" href="./pages/infos-utiles.html">
+        <strong>Infos utiles</strong>
+       
+      </a>
+
     </div>
+
   </section>
 
   <section class="grid-2">
+
     <div class="panel">
-      <h2 class="section-title">Usage terrain</h2>
-      <div class="list">
-        <div class="item"><h3>Convertir vite</h3><p>Page dédiée AR ↔ € avec dernier taux sauvegardé localement.</p></div>
-        <div class="item"><h3>Saisir une dépense</h3><p>Ajout rapide depuis la page Dépenses sans passer par un back-office lourd.</p></div>
-        <div class="item"><h3>Retrouver une réservation</h3><p>Contacts, numéros et lieux accessibles sans fouiller dans les emails.</p></div>
+
       </div>
+
     </div>
+
     <div class="panel">
-      <h2 class="section-title">Rappels</h2>
-      <div class="list">
-        <div class="item"><h3>Mode offline</h3><p>Les notes et les états de suivi utilisent le stockage local du navigateur.</p></div>
-        <div class="item"><h3>Taux de change</h3><p>La conversion fonctionne avec le dernier taux mémorisé si le réseau est absent.</p></div>
-        <div class="item"><h3>GitHub Pages</h3><p>Le site se publie tel quel : il suffit de garder <code>index.html</code> à la racine.</p></div>
-      </div>
-    </div>
+
   </section>
 
-  <div class="page-footer">Projet voyage Madagascar • <span data-current-year></span></div>
 </main>
 
 <script src="assets/js/app.js"></script>
+
 </body>
 </html>
