@@ -9,6 +9,10 @@
 
   <style>
 
+/* ===============================
+PALETTE COULEUR
+=============================== */
+
 :root {
   --bg-main: #0f0f10;
   --bg-panel: #1b1c1f;
@@ -19,15 +23,29 @@
 
   --btn-brown: #5a3e2b;
   --btn-blue: #16324f;
-
-  --text-main: #ffffff;
-  --text-soft: #c9cdd3;
 }
+
+/* ===============================
+FOND GENERAL
+=============================== */
 
 body {
   background: var(--bg-main);
-  color: var(--text-main);
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
+
+/* ===============================
+TOUTES LES POLICES EN BLANC
+=============================== */
+
+* {
+  color: #ffffff !important;
+}
+
+/* ===============================
+PANELS
+=============================== */
 
 .panel,
 .summary-card,
@@ -36,9 +54,13 @@ body {
   border: 1px solid var(--border-soft);
 }
 
+/* ===============================
+BOUTONS NAVIGATION EN RELIEF
+=============================== */
+
 .nav-item {
+
   background: var(--bg-card);
-  color: var(--text-main);
 
   border: 2px solid var(--border-main);
 
@@ -51,14 +73,6 @@ body {
   display: block;
 
   transition: all 0.15s ease;
-
-  box-shadow:
-    0 6px 14px rgba(0,0,0,0.35);
-}
-
-/* relief principal */
-
-.nav-item {
 
   transform: translateY(-2px);
 
@@ -90,28 +104,20 @@ body {
 
 }
 
-/* texte */
-
-h1,
-h2,
-h3,
-strong {
-  color: var(--text-main);
-}
-
-span,
-p,
-.note {
-  color: var(--text-soft);
-}
+/* ===============================
+FOOTER
+=============================== */
 
 .page-footer {
-  color: var(--text-soft);
+  text-align: center;
+  padding: 20px;
+  opacity: 0.7;
 }
 
   </style>
 
 </head>
+
 <body>
 
 <main class="page">
@@ -125,7 +131,6 @@ p,
   </section>
 
   <section class="summary grid-3">
-
   </section>
 
   <section class="panel">
@@ -138,22 +143,18 @@ p,
 
       <a class="nav-item" href="./pages/convertisseur.html">
         <strong>Convertisseur</strong>
-        
       </a>
 
       <a class="nav-item" href="./pages/depenses.html">
         <strong>Ajouter / suivre les dépenses</strong>
-       
       </a>
 
       <a class="nav-item" href="./pages/feuille-de-route.html">
         <strong>Feuille de route</strong>
-        
       </a>
 
       <a class="nav-item" href="./pages/reservations.html">
         <strong>Mes réservations</strong>
-      
       </a>
 
       <a class="nav-item" href="./pages/agenda.html">
@@ -162,7 +163,6 @@ p,
 
       <a class="nav-item" href="./pages/infos-utiles.html">
         <strong>Infos utiles</strong>
-       
       </a>
 
     </div>
@@ -172,12 +172,10 @@ p,
   <section class="grid-2">
 
     <div class="panel">
-
-      </div>
-
     </div>
 
     <div class="panel">
+    </div>
 
   </section>
 
