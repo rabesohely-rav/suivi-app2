@@ -1,18 +1,20 @@
 {
+  "id": "/suivi-app2/",
   "name": "Suivi App",
   "short_name": "Suivi",
-  "start_url": "./index.html",
+  "start_url": "/suivi-app2/index.html",
+  "scope": "/suivi-app2/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#1976d2",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "/suivi-app2/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "icon-512.png",
+      "src": "/suivi-app2/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
