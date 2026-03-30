@@ -245,8 +245,36 @@ tfoot td{
   padding:4px 0 20px;
 }
 @media (max-width:760px){
-  .nav-grid,.grid-2,.grid-3,.grid-4,.toolbar-top{grid-template-columns:1fr}
-  .day-top{flex-direction:column;align-items:start}
-  .hero h1{font-size:24px}
-  .page{padding:10px}
+  .nav-grid,
+  .grid-2,
+  .grid-4,
+  .toolbar-top{
+    grid-template-columns:1fr;
+  }
+
+  /* Navigation en 2 colonnes au lieu d'une */
+  .grid-3{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .day-top{
+    flex-direction:column;
+    align-items:start;
+  }
+
+  .hero h1{
+    font-size:24px;
+  }
+
+  .page{
+    padding:10px;
+  }
+}
+
+/* Option recommandée : très petit mobile */
+@media (max-width:480px){
+  .grid-3{
+    grid-template-columns:1fr;
+  }
+}
 }
